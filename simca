@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fullscreen Video</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background: black;
+      overflow: hidden;
+    }
+    video {
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+  <video id="myVideo" autoplay muted controls>
+    <source src="TVE_VIDEO.mp4" type="video/mp4">
+    Tvůj prohlížeč nepodporuje video tag.
+  </video>
+
+  <script>
+    const video = document.getElementById('myVideo');
+    // Po kliknutí na video zapnout zvuk
+    video.addEventListener('click', () => {
+      video.muted = false;
+    });
+  </script>
+</body>
+</html>
